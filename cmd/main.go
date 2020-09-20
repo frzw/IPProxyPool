@@ -1,12 +1,9 @@
 package main
 
-import (
-	exam "gitee.com/erdanli/ipproxypool/internal/examination"
-	"gitee.com/erdanli/ipproxypool/internal/storage"
-)
+import exam "gitee.com/erdanli/ipproxypool/internal/examination"
 
 func main() {
-	avaliableProxyIP, _ := exam.TestJiangXianLi()
-	storage.MangoDB(avaliableProxyIP)
-
+	// avaliableProxyIP, _ := exam.TestJiangXianLi()
+	// _, _, result := storage.MangoDB()
+	exam.DeleteUnavailableProxyIP()
 }
